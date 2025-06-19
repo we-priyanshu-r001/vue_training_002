@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "play gloomhaven",
+      "is_fav": true
+    },
+    {
+      "id": 2,
+      "title": "mow the lawn",
+      "is_fav": true
+    },
+    {
+      "title": "become an eldern lord",
+      "is_fav": true,
+      "id": 3
+    },
+    {
+      "title": "eat some pinapples",
+      "is_fav": false,
+      "id": 4
+    }
+  ]
+}

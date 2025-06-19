@@ -2,13 +2,16 @@
     <div class="task">
         <h2>{{task.title}}</h2>
         <div class="icons">
-            <i class="material-icons">delete</i>
-            <i class="material-icons">favorite</i>
+            <i class="material-icons hover:bg-red-400" @click.prevent="taskStore.deleteTask(task.id)">delete</i>
+            <i class="material-icons" @click.prevent="taskStore.toggleFav(task.id)" :class="{active: task.is_fav}">favorite</i>
         </div>
     </div>
 </template>
 
 <script setup>
+import { useTaskStore } from '@/stores/TaskStore';
+
+const taskStore = useTaskStore()
 
 defineProps({
     task: {
@@ -42,6 +45,10 @@ defineProps({
   margin-left: 6px;
   cursor: pointer;
   color: #bbb;
+}
+
+.task i.active {
+  color: #ff005d;
 }
 
 </style>
