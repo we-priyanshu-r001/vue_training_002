@@ -6,6 +6,11 @@ const routes = [
         name: 'home', 
         component: () => import('../views/HomeView.vue')  
     },
+    {
+        path: '/tasks', 
+        name: 'tasks', 
+        component: () => import('../views/PiniaTasks.vue')  
+    },
     {   
         path: '/contact', 
         name: 'contact', 

@@ -11,6 +11,7 @@
         <div class="hidden sm:-my-px sm:flex sm:space-x-8">
             <nav-link to="/">Home</nav-link>
             <nav-link to="/contact">Contact</nav-link>
+            <nav-link to="/tasks">Pinia Tasks</nav-link>
         </div>
 
         <!-- Mobile menu button -->

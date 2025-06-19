@@ -12,9 +12,7 @@ const is_active = ref(true)
 <template>
   <nav-bar />
 
-  <div>
-    <router-view></router-view>
-  </div>
+  <router-view></router-view>
 
-  <mouse-tracker></mouse-tracker>
+  <mouse-tracker /> 
 </template>
