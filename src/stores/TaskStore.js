@@ -1,3 +1,4 @@
+import axios from 'axios'
 import { defineStore } from 'pinia'
 
 export const useTaskStore = defineStore('taskStore', {
@@ -26,13 +27,14 @@ export const useTaskStore = defineStore('taskStore', {
   actions: {
     async getTask(){
       this.is_loading = true
-      const data = await fetch('http://localhost:3000/tasks')
-      const tasks = await data.json()
+      const data = await axios.get('http://localhost:3000/tasks')
+      const tasks = await data.data
       this.tasks = tasks
       this.is_loading = false
     },
     
-    addTask(newTask){
+    async addTask(newTask){
+      await axios.post('http://localhost:3000/tasks', newTask)
       this.tasks.push(newTask)
     },
 

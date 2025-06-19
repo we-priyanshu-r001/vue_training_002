@@ -19,6 +19,11 @@
       "title": "eat some pinapples",
       "is_fav": false,
       "id": 4
+    },
+    {
+      "id": 113,
+      "title": "This data is added ",
+      "is_fav": false
     }
   ]
 }
